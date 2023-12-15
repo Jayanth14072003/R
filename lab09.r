@@ -1,0 +1,10 @@
+df=data.frame(Name=c("A","B","C","D","E","G"),Age=c(25,30,22,25,24,21),Gender=c("Female","Male","Male","Female","Male","Female"),Score=c(85,92,78,87,98,80))
+cat("\nSubset of Data Frames (Age>25):\n")
+sd=df[df$Age>25]
+print(sd)
+stats_sum=summary(df$score)
+df$Grade=ifelse(df$Score>=90,"A",ifelse(df$Score>=80),"B","A")
+print(df)
+gen_avg=aggregate(df$Score,by=list(df$Gender),FUN=mean)
+colnames(gen_avg)=c("Gender","Age_Score")
+print(gen_avg)
