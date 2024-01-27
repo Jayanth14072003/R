@@ -9,7 +9,7 @@ cat("\nMaxmum Value is \n")
 max(num)
 
 #install.packages("Deriv")
-library(Deriv)
+#library(Deriv)
 f=function(x)x^2
 derivative=Deriv(f)
 cat("Derivative of f(x)=x^2 is ", derivative (2),"\n")
